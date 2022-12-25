@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class CartModel (models.Model):
+class CarsModel (models.Model):
 
     CarsImage=models.ImageField(upload_to= "media/cars")
     CarsName=models.CharField(max_length=100)
