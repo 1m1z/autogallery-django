@@ -12,7 +12,7 @@ class CarsModel (models.Model):
     def __str__(self):
         return self.CarsName
 
-class SingleCarmodel (models.Model):
+class SingleCarmodel (CarsModel):
     CarsImage=models.ImageField(upload_to= "media/cars")
     CarsName=models.CharField(max_length=100)
     CarsModel=models.CharField(max_length=250)
