@@ -149,10 +149,12 @@
     
     
         <div class="row">
-            {% for car in cars %}
-            {% if forloop.counter < 2 %}
+            
+            {% comment %} {% if forloop.counter < 2 %} {% endcomment %}
             <div class="col-md-12">
+                
                 <div class="carousel-car owl-carousel">
+                    {% for car in cars %}
                     <div class="item">
                         <div class="car-wrap rounded ftco-animate">
                             <div class="img rounded d-flex align-items-end">
@@ -171,9 +173,10 @@
                             
                         </div>
                     </div>
-                </div>
-                {% endif %}
                 {% endfor %}
+                </div>
+                {% comment %} {% endif %} {% endcomment %}
+                
             </div>
         </div>
     </div>
