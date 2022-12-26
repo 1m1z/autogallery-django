@@ -1,0 +1,14 @@
+{% load static %}
+{% for car in cars %}
+<div class="card col-4 gx-4" style="width: 18rem;">
+  <img src="{{car.CarsImage.url}}" class="card-imgs-top" alt="عکس ماشین">
+  <div class="card-body"> 
+    <h5 class="card-title">
+        {{ car.CarsName }}
+    </h5>
+    <p class="card-text">{{ car.CarsModel}}</p>
+    <a href="#" class="btn btn-primary">{{ car.CarsSalary }}</a>
+    <a href="cars/carsingle/{{ car.id }}" class="btn btn-primary">بیشتر</a>
+  </div>
+</div>
+{% endfor %}

@@ -3,10 +3,13 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from Home.views import homepage
+from Products.views import carslist , carsingle
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
+    path('cars/', carslist),
+    path('cars/carsingle/<int:car_id>', carsingle)
 ]
 
 
