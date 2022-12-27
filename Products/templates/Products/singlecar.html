@@ -1,4 +1,32 @@
-<!DOCTYPE html>
+
+
+<div class="row">
+	{% for scar in scars %}
+	<div class="col-12">
+		
+		<img src="{{car.CarsImage.url}}">
+		<h1>{{car.CarsModel}}</h1>
+		<h2>{{car.CarsName}}</h2>
+		<h3>{{car.CarsName}}</h3>
+		<h4>{{car.CarsSalary}}</h4>
+		<h4>{{scar.CarsMileage}}</h4>
+	</div>
+	{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Carbook - Free Bootstrap 4 Template by Colorlib</title>
@@ -483,4 +511,4 @@
     <script src="{% static 'js/jquery.min.js' %}"></script>
     
   </body>
-</html>
+</html> {% endcomment %}

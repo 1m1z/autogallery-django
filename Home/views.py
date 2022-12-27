@@ -22,11 +22,9 @@ def carshow(request):
 
 
 def singlecar(request , car_id):
-    car = CarsModel.objects.get(pk = car_id)
-    scar = SingleCarmodel.objects.get(pk = car_id)
+    scar = SingleCarmodel.objects.get(pk = car_id) , SingleCarmodel.objects.all()
     context={
-        "cars":car,
-        "scars":scar
+        "scars":scar,
     }
 
     return render(request,"Products/singlecar.html",context)

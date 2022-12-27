@@ -16,7 +16,8 @@ class CarsModel (models.Model):
         return self.CarsName
 
 class SingleCarmodel(models.Model):
-    car = models.ForeignKey(CarsModel , on_delete=models.CASCADE)
+    # car = models.ForeignKey(CarsModel , on_delete=models.CASCADE)
+    car = models.ForeignKey(CarsModel ,null=True, on_delete=models.CASCADE)
     CarsMileage = models.IntegerField()
 
     Transmision_choices = (
@@ -52,4 +53,4 @@ class SingleCarmodel(models.Model):
 
     
     def __str__(self):
-        return self.CarsName
+        return str(self.CarsMileage)

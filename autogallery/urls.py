@@ -9,7 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
     path('cars/', carshow),
-    path('cars/carsingle/<int:car_id>', singlecar)
+    path('cars/singlecar/<int:car_id>', singlecar)
 ]
 
 
