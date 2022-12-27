@@ -12,7 +12,6 @@
     <a href="cars/carsingle/{{ car.id }}" class="btn btn-primary">بیشتر</a>
   </div>
 </div>
-<<<<<<< HEAD
 {% endfor %} {% endcomment %}
 
 <!DOCTYPE html>
@@ -78,10 +77,10 @@
 		<section class="ftco-section bg-light">
     	<div class="container">
     		<div class="row">
+          {% for car in cars %}
     			<div class="col-md-4">
     				<div class="car-wrap rounded ftco-animate">
     					<div>
-                {% for car in cars %}
                 <img class="img rounded d-flex align-items-end" src="{{car.CarsImage.url}}">
     					</div>
     					<div class="text">
@@ -91,14 +90,10 @@
 	    						<p class="price ml-auto">{{car.CarsSalary}}</p>
     						</div>
     						<p class="d-flex mb-0 d-block pb-4"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="car-single.html" class="btn btn-secondary py-2 ml-1">Details</a></p>
-                {% endfor %}
     					</div>
-              
     				</div>
-            
     			</div>
-
-          
+          {% endfor %}
     		</div>
     		<div class="row mt-5">
           <div class="col text-center">
@@ -207,7 +202,3 @@
     
   </body>
 </html>
-=======
-{% endfor %} 
-
->>>>>>> e9fa61f77b29d73eb11a9d414bc3f76528c55e5e
