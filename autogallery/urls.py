@@ -2,14 +2,14 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from Home.views import homepage
-from Products.views import carslist , carsingle
+from Home.views import homepage, carshow , singlecar
+# from Products.views import carslist , singlecar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage),
-    path('cars/', carslist),
-    path('cars/carsingle/<int:car_id>', carsingle)
+    path('cars/', carshow),
+    path('cars/carsingle/<int:car_id>', singlecar)
 ]
 
 
