@@ -9,3 +9,13 @@ def homepage(request):
     }
 
     return render(request,"home/home.html",context)
+
+
+def carshow(request):
+    car = CarsModel.objects.all()
+    
+    context={
+        "cars":car
+    }
+
+    return render(request,"Products/cars.html",context)
