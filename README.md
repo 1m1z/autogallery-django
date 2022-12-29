@@ -6,7 +6,6 @@ this project **DOSENT HAVE VENV** and yourself should make one VENV for your pro
   * enter venv enviroment
   * pip freez > requirements.txt
   * pip install -r requirements.txt
-  * cd to project (mercedes benz)
   * py manage.py makemigrations
   * py manage.py migrate
   * py manage.py runserver
