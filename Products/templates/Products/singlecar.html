@@ -54,7 +54,7 @@
 	</nav>
 <!-- END nav -->
 
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static 'images/bg_3.jpg' %}');" data-stellar-background-ratio="0.5">
 	<div class="overlay"></div>
 	<div class="container">
 	<div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
@@ -72,8 +72,8 @@
 	<div class="row justify-content-center">
 		<div class="col-md-12">
 			<div class="car-details">
-				<div class="img rounded">
-					<img src="{{ scars.CarsImage.url }}">
+				<div >
+					<img class="img rounded" src="{{ scars.CarsImage.url }}">
 				</div>
 				<div class="text text-center">
 					<span class="subheading"> {{ scars.CarsName }} </span>
@@ -162,43 +162,7 @@
 	</div>
 </section>
 
-<section class="ftco-section ftco-no-pt">
-	<div class="container">
-		<div class="row justify-content-center">
-		<div class="col-md-12 heading-section text-center ftco-animate mb-5">
-		<span class="subheading">Choose Car</span>
-		<h2 class="mb-2">Related Cars</h2>
-		</div>
-	</div>
-	
-	<div class="row">
-		
-		<div class="col-md-4">
-			
-				<div class="car-wrap rounded ftco-animate">
-					
-					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-1.jpg);">
-					</div>
-					<div class="text">
-						
-						<h2 class="mb-0"><a href="car-single.html">{{ scar.CarsName }}</a></h2>
-						
-						<div class="d-flex mb-3">
-							<span class="cat">Cheverolet</span>
-							<p class="price ml-auto">$500 <span>/day</span></p>
-						</div>
-						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="car-single.html" class="btn btn-secondary py-2 ml-1">Details</a></p>
-					</div>
-					
-				</div>
-				
-			</div>
-		
-		</div>
-		
-	</div>
-	
-</section>
+
 
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
