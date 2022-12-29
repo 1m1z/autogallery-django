@@ -20,11 +20,14 @@ def carshow(request):
 
     return render(request,"Products/cars.html",context)
 
+# scar = CarsModel.objects.get(pk = car_id) 
 
-def singlecar(request , car_id):
-    scar = SingleCarmodel.objects.get(pk = car_id) , SingleCarmodel.objects.all()
+
+def singlecar(request,car_id):
+    scar = SingleCarmodel.objects.filter(pk = car_id)
+    
     context={
-        "scars":scar,
+        "scars":scar
     }
 
     return render(request,"Products/singlecar.html",context)

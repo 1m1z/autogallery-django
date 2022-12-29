@@ -1,18 +1,22 @@
+{% load static %}
 
-
-<div class="row">
-	{% for scar in scars %}
-	<div class="col-12">
-		
-		<img src="{{car.CarsImage.url}}">
-		<h1>{{car.CarsModel}}</h1>
-		<h2>{{car.CarsName}}</h2>
-		<h3>{{car.CarsName}}</h3>
-		<h4>{{car.CarsSalary}}</h4>
-		<h4>{{scar.CarsMileage}}</h4>
-	</div>
-	{% endfor %}
-</div>
+{% comment %} <div class="row">
+	
+	<div class="col-12"> {% endcomment %}
+		ss
+		{% comment %} {% for car in cars %} {% endcomment %}
+		{% comment %} <img src="{{cars.CarsImage.url}}"> {% endcomment %}
+		<h1>{{car.CarsName}}</h1>
+		<h1>{{cars.CarsName}}</h1>
+		<h1>{{scar.CarsName}}</h1>
+		<h2>{{scars.CarsMileage}}</h2>
+		{% comment %} <h3>{{cars.CarsName}}</h3>
+		<h4>{{cars.CarsSalary}}</h4>
+		<h4>{{scars.CarsMileage}}</h4>  {% endcomment %}
+		{% comment %} {% endfor %} {% endcomment %}
+	{% comment %} </div>
+	
+</div> {% endcomment %}
 
 
 
