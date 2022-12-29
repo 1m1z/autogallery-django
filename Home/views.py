@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import CarsModel,SingleCarmodel
+from .models import CarsModel
+
 
 def homepage(request):
     car = CarsModel.objects.all()
@@ -20,14 +21,35 @@ def carshow(request):
 
     return render(request,"Products/cars.html",context)
 
-# scar = CarsModel.objects.get(pk = car_id) 
+def carshowdetails(request):
+    car = CarsModel.objects.all()
+    
+    context={
+        "cars":car
+    }
 
+    return render(request,"Products/singlecar.html",context)
 
 def singlecar(request,car_id):
-    scar = SingleCarmodel.objects.filter(pk = car_id)
+    scar = CarsModel.objects.get(pk = car_id)
     
     context={
         "scars":scar
     }
 
     return render(request,"Products/singlecar.html",context)
+
+
+# scar = CarsModel.objects.get(pk = car_id) 
+
+
+# def singlecar(request,car_id):
+#     scar = SingleCarmodel.objects.filter(pk = car_id)
+    
+#     context={
+#         "scars":scar
+#     }
+
+#     return render(request,"Products/singlecar.html",context)
+
+
