@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import CarsModel
+from Products.models import CarsModel
 
 
 def homepage(request):
