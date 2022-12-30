@@ -57,11 +57,46 @@
       </div>
     </section>
 
+
+
+
+
+
+
+
     <section class="ftco-section ftco-degree-bg">
       <div class="container">
         <div class="row">
           <div class="col-md-8 ftco-animate">
-            <h2 class="mb-3"><span class="subheading"> {{ sposts.PostTitle }} </span>
+            <h2 class="mb-3">{{ sposts.PostTitle }}</h2>
+              <img src="{{ sposts.PostImage.url }}" alt="" class="img-fluid center">
+            <p>{{ sposts.PostDescrption }}</p>
+            <p>{{ sposts.LongPostDescrption }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% comment %} <section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ftco-animate">
+            <h2 class="mb-3 text-center"><span class="subheading "> {{ sposts.PostTitle }} </span>
             </h2>
             <div >
               <img class="img rounded" src="{{ sposts.PostImage.url }}">
@@ -71,11 +106,18 @@
                 <h2> {{sposts.LongPostDescrption}} </h2>
               </div>
             </div>
-              <!-- END comment-list -->  
+              
           </div>
         </div>
       </div>
-    </section> <!-- .section -->
+    </section>  {% endcomment %}
+
+
+
+
+
+
+
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

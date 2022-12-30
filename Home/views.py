@@ -41,8 +41,6 @@ def singlecar(request,car_id):
     return render(request,"Products/singlecar.html",context)
 
 
-<<<<<<< HEAD
-=======
 
 def postlist(request):
     Post = PostModel.objects.all()
@@ -87,6 +85,5 @@ def postlistHome(request):
 #     }
 
 #     return render(request,"Products/singlecar.html",context)
->>>>>>> 1406b8a8fa4849c72a7c87e7f2d6d4a4991bea71
 
 
