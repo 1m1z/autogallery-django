@@ -22,14 +22,6 @@ def carshow(request):
 
     return render(request,"Products/cars.html",context)
 
-def carshowdetails(request):
-    car = CarsModel.objects.all()
-    
-    context={
-        "cars":car
-    }
-
-    return render(request,"Products/singlecar.html",context)
 
 def singlecar(request,car_id):
     scar = CarsModel.objects.get(pk = car_id)
@@ -43,10 +35,10 @@ def singlecar(request,car_id):
 
 
 def postlist(request):
-    Post = PostModel.objects.all()
+    post = PostModel.objects.all()
 
     context={
-        "posts":Post
+        "posts":post
     }
     return render(request,"Blog/post.html",context)
 
@@ -61,12 +53,12 @@ def singlepost(request , post_id):
     return render(request,"Blog/singlepost.html",context)
 
 def postlistHome(request):
-    Post = PostModel.objects.all()
+    post = PostModel.objects.all()
 
     context={
-        "posts":Post
+        "posts":post
     }
-    return render(request,"/Home/home.html",context)
+    return render(request,"home/home.html",context)
 
 
 
