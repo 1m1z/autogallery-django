@@ -40,16 +40,5 @@ def singlecar(request,car_id):
     return render(request,"Products/singlecar.html",context)
 
 
-# scar = CarsModel.objects.get(pk = car_id) 
-
-
-# def singlecar(request,car_id):
-#     scar = SingleCarmodel.objects.filter(pk = car_id)
-    
-#     context={
-#         "scars":scar
-#     }
-
-#     return render(request,"Products/singlecar.html",context)
 
 
