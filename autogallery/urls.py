@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from Home.views import homepage, carshow , singlecar
+from Home.views import homepage, carshow , singlecar, postlist, singlepost
 from Contact.views import contactus
 # from Products.views import carslist , singlecar
 
@@ -11,7 +11,11 @@ urlpatterns = [
     path('', homepage),
     path('cars/', carshow),
     path('cars/singlecar/<int:car_id>', singlecar),
-    path('contactus/' , contactus)
+    path('contactus/' , contactus),
+    path('posts/',postlist),
+    path('posts/singlepost/<int:post_id>',singlepost)
+
+    
 ]
 
 
