@@ -1,3 +1,4 @@
 from django.contrib import admin
 
-# admin.site.register(SingleCarmodel)
+from Home.models import ServiceModel
+admin.site.register(ServiceModel)

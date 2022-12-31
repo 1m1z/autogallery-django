@@ -1,16 +1,18 @@
 from django.shortcuts import render
 from Products.models import CarsModel
 from Blog.models import PostModel
+from Home.models import ServiceModel
 
 
 
 def homepage(request):
     car = CarsModel.objects.all()
     post = PostModel.objects.all()
-    
+    service= ServiceModel.objects.all
     context={
         "cars":car,
-        "posts" : post
+        "posts" : post,
+        "services":service,
     }
 
     return render(request,"home/home.html",context)
@@ -56,6 +58,7 @@ def singlepost(request , post_id):
     }
 
     return render(request,"Blog/singlepost.html",context)
+
 
 
 
