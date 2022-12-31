@@ -3,14 +3,19 @@ from Products.models import CarsModel
 from Blog.models import PostModel
 
 
+
 def homepage(request):
     car = CarsModel.objects.all()
+    post = PostModel.objects.all()
     
     context={
-        "cars":car
+        "cars":car,
+        "posts" : post
     }
 
     return render(request,"home/home.html",context)
+
+
 
 
 def carshow(request):
@@ -52,30 +57,6 @@ def singlepost(request , post_id):
 
     return render(request,"Blog/singlepost.html",context)
 
-def postlistHome(request):
-    post = PostModel.objects.all()
 
-    context={
-        "posts":post
-    }
-    return render(request,"home/home.html",context)
-
-
-
-
-
-
-
-# scar = CarsModel.objects.get(pk = car_id) 
-
-
-# def singlecar(request,car_id):
-#     scar = SingleCarmodel.objects.filter(pk = car_id)
-    
-#     context={
-#         "scars":scar
-#     }
-
-#     return render(request,"Products/singlecar.html",context)
 
 
