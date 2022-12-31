@@ -1,4 +1,7 @@
 {% load static %}
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +28,6 @@
 
 </head>
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="index.html">Car<span>Book</span></a>
@@ -35,17 +37,18 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
             <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
             <li class="nav-item"><a href="/cars" class="nav-link">Cars</a></li>
-            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="/posts" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="/contactus" class="nav-link">Contact</a></li>
         </ul>
         </div>
     </div>
     </nav>
+    
 <!-- END nav -->
 
 <div class="hero-wrap ftco-degree-bg" style="background-image: url({% static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
@@ -68,38 +71,47 @@
     <section class="ftco-section ftco-no-pt bg-light">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-md-12	featured-top">
+            <div class="col-md-12 featured-top">
                 <div class="row no-gutters">
                     <div class="col-md-4 d-flex align-items-center">
-                        <form action="#" class="request-form ftco-animate bg-primary">
+
+
+
+            <form action="https://formspree.io/f/myyagrky" method="POST" class="request-form ftco-animate bg-primary">
                     <h2>Make your trip</h2>
+                <fieldset id="fs-frm-inputs">
                             <div class="form-group">
-                                <label for="" class="label">Pick-up location</label>
-                                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                                <label for="full-name" class="label">First name</label>
+                                <input type="text" id="full-name"  name="name" class="form-control" placeholder="Amir" required="true">
                             </div>
                             <div class="form-group">
-                                <label for="" class="label">Drop-off location</label>
-                                <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+                                <label for="full-name" class="label">last name</label>
+                                <input type="text" id="full-name"  name="name" class="form-control" placeholder="Golru" required="">
                             </div>
                             <div class="d-flex">
                                 <div class="form-group mr-2">
-                        <label for="" class="label">Pick-up date</label>
-                        <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
+                        <label for="" class="label"> car name </label>
+                        <input type="text" name="message" class="form-control" placeholder="BMW">
                         </div>
                         <div class="form-group ml-2">
-                        <label for="" class="label">Drop-off date</label>
-                        <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+                        <label for="" class="label">car model</label>
+                        <input type="text" name="message" class="form-control" placeholder="M5">
                         </div>
                     </div>
                     <div class="form-group">
-                    <label for="" class="label">Pick-up time</label>
-                    <input type="text" class="form-control" id="time_pick" placeholder="Time">
+                    <label for="email-address" class="label">email address</label>
+                    <input type="email" class="form-control" name="_replyto" id="email-address" placeholder="example@gmail.com" required="">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Rent A Car Now" class="btn btn-secondary py-3 px-4">
                     </div>
-                        </form>
-                    </div>
+                </fieldset>
+            </form>
+</div>
+
+
+
+
                     <div class="col-md-8 d-flex align-items-center">
                         <div class="services-wrap rounded-right w-100">
                             <h3 class="heading-section mb-4">Better Way to Rent Your Perfect Cars</h3>
@@ -129,7 +141,7 @@
                             </div>      
                             </div>
                         </div>
-                        <p><a href="#" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
+                        <p><a href="/contactus" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
                         </div>
                     </div>
                 </div>
@@ -276,57 +288,74 @@
         </div>
     </div>
     
-    {% comment %} <div class="row d-flex">
-        {% for text in blogs %}
-        <div class="col-md-4 d-flex ftco-animate">
-            
-            <div class="blog-entry justify-content-end">
-                
-                <a href="blog-single.html" class="block-20">
-                <img src="{{ text.PostImage.url }}">
-                </a>
-                
-                <div class="text pt-4">
-                <h1 class="heading mt-2">{{ text.PostTitle }}</h1>
-                
-                <h3 class="heading mt-2"><a href="#">{{ text.PostDescrption }}</a></h3>
-                <p><a href="#" class="btn btn-primary">Read more</a></p>
-            
-                </div>
-                
-            </div>
-            
-        </div>
-        {% endfor %}
-    </div> {% endcomment %}
+
     
-</div>
+
 
 <div class="row d-flex">
     {% for post in posts %}
     <div class="col-md-4 d-flex ftco-animate">
-        
         <div class="blog-entry justify-content-end">
-            
             <a href="blog-single.html" class="block-20">
             <img src="{{ post.PostImage.url }}">
             </a>
-            
             <div class="text pt-4">
             <h1 class="heading mt-2">{{ post.PostTitle }}</h1>
-            
             <h3 class="heading mt-2"><a href="#">{{ post.PostDescrption }}</a></h3>
-            <p><a href="#" class="btn btn-primary">Read more</a></p>
-        
+            <p><a href="/posts/singlepost/{{ post.id }}" class="btn btn-primary">Read more</a></p>
             </div>
-            
         </div>
-        
     </div>
     {% endfor %}
+    </div>
 </div>
-
 </section>	
+
+
+
+
+
+<section class="ftco-counter ftco-section img bg-light" id="section-counter">
+    <div class="overlay"></div>
+<div class="container">
+    <div class="row">
+  <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text text-border d-flex align-items-center">
+        <strong class="number" data-number="60">0</strong>
+        <span>Year <br>Experiensced</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text text-border d-flex align-items-center">
+        <strong class="number" data-number="1090">0</strong>
+        <span>Total <br>Cars</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text text-border d-flex align-items-center">
+        <strong class="number" data-number="2590">0</strong>
+        <span>Happy <br>Customers</span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+    <div class="block-18">
+      <div class="text d-flex align-items-center">
+        <strong class="number" data-number="67">0</strong>
+        <span>Total <br>Branches</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>	
+
+
 
 
 
@@ -390,6 +419,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         </div>
     </div>
     </div>
+    </div>
+</section>	
 </footer>
 
 
