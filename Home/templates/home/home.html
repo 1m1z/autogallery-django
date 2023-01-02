@@ -223,19 +223,25 @@
         </div>
         </div>
             <div class="row">
-                {% for service in services %}
+
                 <div class="col-md-3">
+                    {% for service in services %}
+
                     <div class="services services-2 w-100 text-center">
+  
                     <div class="d-flex align-items-center justify-content-center">
                         <span>
                             <img src="{{service.ServiceImage.url}}" class="icon img-thumbnail img-circle">
                         </span>
+                        
                     </div>
                     <div class="text w-100">
                     <h3 class="heading mb-2">{{ service.ServiceTitle }}</h3>
                     <p>{{ service.ServiceDescrption }}</p>
+                    {% endfor %}
+
                 </div>
-                {% endfor %}
+
             </div>
         </div>
         </div>
