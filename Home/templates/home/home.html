@@ -223,9 +223,9 @@
         </div>
         </div>
             <div class="row">
-
+                {% for service in services %}
                 <div class="col-md-3">
-                    {% for service in services %}
+                    
 
                     <div class="services services-2 w-100 text-center">
   
@@ -238,12 +238,14 @@
                     <div class="text w-100">
                     <h3 class="heading mb-2">{{ service.ServiceTitle }}</h3>
                     <p>{{ service.ServiceDescrption }}</p>
-                    {% endfor %}
+                   
 
                 </div>
-
+                
             </div>
+            
         </div>
+        {% endfor %}
         </div>
     </section>
 
